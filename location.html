@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="location.css">
+    <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header class="headerbar" id="her">
+      <div id="text" class="transprant"> <div> 
+        <div class="transprant1">
+          <div class="text-header">LoGeek</div>
+          <div class="text-header1"> “ Je veux trouver la location qui me ressemble ”</div>
+        </div>
+      </div> </div>
+        <div class="nav">
+            <input type="checkbox" id="nav-check" >
+            <div class="nav-header">
+              <div class="nav-title">
+                  <img src="logo/logo.svg" class="navlogo">
+                LoGeek
+              </div>
+            </div>
+            <div class="nav-btn" >
+              <label for="nav-check" >
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+            
+            <div class="nav-links">
+              <a class="lind" href="#" onclick="dis1()">Home</a>
+              <a class="lind" href="#" onclick="dis()">réservation</a>
+              <a class="lind" href="#" onclick="document.getElementById('idlg').style.display='block' "  onclick="login()">Se connecter</a>
+              <a class="lind" href="#"  onclick="document.getElementById('idsn').style.display='block'">S'inscrire</a>
+              <a href="#" id="myBtn" class="myButton">déposer un annonce</a>
+              </div>
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+               <div class="modal-content">
+               <span class="close">&times;</span>
+               <form>
+               <input type="text" class="desinput" id="hi" placeholder="type de location" />
+               <div class="dropdown">
+                <button class="dropbtn">chosie</button>
+                <div class="dropdown-content">
+                <a href="#" onclick="document.getElementById('hi').value = 'Maison';">Maison</a>
+                <a href="#" onclick="document.getElementById('hi').value = 'Villa';">Villa</a>
+                <a href="#" onclick="document.getElementById('hi').value = 'Appartement';">Appartement</a>
+                <a href="#" onclick="document.getElementById('hi').value = 'Garçonnière';">Garçonnière</a>
+                </div>
+                </div>
+                <input type="text" class="desinput1"  placeholder="L'espace en m²" />
+                <input type="text" class="desinput2"  placeholder="Titre de l'annoce" />
+                <!--Sélectionnez la ville -->
+                <div class="select">
+                  <select>
+                      <option>Sélectionnez la ville </option>
+                      <option>Casablanca</option>
+                      <option>Agadir</option>
+                      <option>Safi</option>
+                      <option>Marrakech</option>
+                  </select>
+                  <div class="select_arrow">
+                  </div>
+                 </div>
+              <!------------------------------------->
+              <textarea type="" class="desinput3"  placeholder="Texte de l'annonce" ></textarea><br>
+              <input type="number"  step="100" class="desinput4"  placeholder="prix en DH" />
+              <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"><br>
+              <button class="retro"> dépose votre annonce  </button><input class="retro1" type="reset">
+                  </form>
+               </div>
+
+            </div>
+          </div>
+          <a href="#"><img src="logo/back.svg" class="back" onclick="sildem()"> </a>
+          <a href="#"><img src="logo/next.svg" class="next" onclick="silde()"> </a>
+        </header>
+        <div class="filter1" class="fil">
+          
+            <p style="margin-top: 25px ; margin-left: 15px;">prix</p>
+            <input type="number"  step="100" class="desinput5"  placeholder="prix min" />
+            <input type="number"  step="100" class="desinput5"  placeholder="prix max" />
+  
+          
+            <p style="margin-top: 25px ; margin-left: 15px;">L'espace</p>
+            <input type="text" class="desinput6"  placeholder="L'espace en m²" />
+          
+          
+            <p style="margin-top: 25px ; margin-left: 15px;">ville </p>
+            <input type="text" class="desinput6"  placeholder="choisissez le ville" />
+          
+            <button class="shea">recherche</button>
+        </div>
+        <div class="cont" id="cont">
+          <!--motor de recherche-->
+        <div class="filter">
+          <div>
+            <p style="margin-top: 25px ; margin-left: 15px;">prix</p>
+            <input type="number"  step="100" class="desinput5"  placeholder="prix min" />
+            <input type="number"  step="100" class="desinput5"  placeholder="prix max" />
+          </div>
+          <div>
+            <p style="margin-top: 25px ; margin-left: 15px;">L'espace</p>
+            <input type="text" class="desinput6"  placeholder="L'espace en m²" />
+          </div>
+          <div>
+            <p style="margin-top: 25px ; margin-left: 15px;">ville </p>
+            <input type="text" class="desinput6"  placeholder="choisissez le ville" />
+          </div>
+          <button class="shea">recherche</button>
+          <img src="img/promo.png" alt="" srcset="">
+        </div>
+        <!-------------------------------------------------------------->
+        <!--galrie-->
+        <div class="pro">
+          <div class="produit" >
+            <img src="img/appr.jpg" class="imgprodu">
+            <div class="dis">
+            <h2 class="tit">Appartement 100 m2 3eme étage </h2><br>
+            <h3 class="prix"> 200€</h3>
+            <h3 class="des">Appartement , Safi</h3>
+          </div>
+          </div>
+          <div class="produit">
+            <img src="img/appr.jpg" class="imgprodu">
+            <div class="dis">
+            <h2 class="tit">Appartement 100 m2 3eme étage </h2><br>
+            <h3 class="prix"> 200€</h3>
+            <h3 class="des">Appartement , Safi</h3>
+          </div>
+          </div>
+          <div class="produit">
+            <img src="img/appr.jpg" class="imgprodu">
+            <div class="dis">
+            <h2 class="tit">Appartement 100 m2 3eme étage </h2><br>
+            <h3 class="prix"> 200€</h3>
+            <h3 class="des">Appartement , Safi</h3>
+          </div>
+          </div>
+          <div class="produit">
+            <img src="img/appr.jpg" class="imgprodu">
+            <div class="dis">
+            <h2 class="tit">Appartement 100 m2 3eme étage </h2><br>
+            <h3 class="prix"> 200€</h3>
+            <h3 class="des">Appartement , Safi</h3>
+          </div>
+          </div>
+          <div class="produit">
+            <img src="img/appr.jpg" class="imgprodu">
+            <div class="dis">
+            <h2 class="tit">Appartement 100 m2 3eme étage </h2><br>
+            <h3 class="prix"> 200€</h3>
+            <h3 class="des">Appartement , Safi</h3>
+          </div>
+          </div>
+          <div class="produit">
+            <img src="img/appr.jpg" class="imgprodu">
+            <div class="dis">
+            <h2 class="tit">Appartement 100 m2 3eme étage </h2><br>
+            <h3 class="prix"> 200€</h3>
+            <h3 class="des">Appartement , Safi</h3>
+          </div>
+          </div>
+          <div class="produit">
+            <img src="img/appr.jpg" class="imgprodu">
+            <div class="dis">
+            <h2 class="tit">Appartement 100 m2 3eme étage </h2><br>
+            <h3 class="prix"> 200€</h3>
+            <h3 class="des">Appartement , Safi</h3>
+          </div>
+          </div>
+          <div class="produit">
+            <img src="img/appr.jpg" class="imgprodu">
+            <div class="dis">
+            <h2 class="tit">Appartement 100 m2 3eme étage </h2><br>
+            <h3 class="prix"> 200€</h3>
+            <h3 class="des">Appartement , Safi</h3>
+          </div>
+          </div>
+        </div>
+      </div>
+       <div class="reserv" id="resv">
+        <div class="imgtres"></div>
+         <div class="contres" > 
+           <h1>Appartement 100 m2 3eme étage trois champre avec selon et cousin moderne </h1>
+           <img src="img/promo1.png" >
+           <h2>20€/jour - 200€/mois</h2>
+           <h3>Type : Appartement</h3>
+           <button onclick="moin()">Mois</button>
+           <button onclick="jour()">Jours</button> 
+           <div class="select" id="sle">
+            <select onclick="totalM()" id="moins">
+                <option>--Mois--</option>
+                <option value="1">1 Mois</option>
+                <option value="2">2 Mois</option>
+                <option value="3">3 Mois</option>
+                <option value="4">4 Mois</option>
+                <option value="5">5 Mois</option>
+                <option value="6">6 Mois</option>
+                <option value="7">7 Mois</option>
+                <option value="8">8 Mois</option>
+                <option value="9">9 Mois</option>
+                <option value="10">10 Mois</option>
+            </select>
+            <div class="select_arrow">
+            </div>
+           
+        </div>
+        <div class="select" id="sle1">
+          <select  onclick="totalj()" id="jour">
+            <option>--Jours--</option>
+            <option value="1">1 jour</option>
+            <option value="2">2 Jours</option>
+            <option value="3">3 Jours</option>
+            <option value="4">4 Jours</option>
+            <option value="5">5 Jours</option>
+            <option value="6">6 Jours</option>
+            <option value="7">7 Jours</option>
+            <option value="8">8 Jours</option>
+            <option value="9">9 Jours</option>
+            <option value="10">10 Jours</option>
+            <option value="11">11 Jours</option>
+            <option value="12">12 Jours</option>
+            <option value="13">13 Jours</option>
+            <option value="14">14 Jours</option>
+            <option value="15">15 Jours</option>
+            <option value="16">16 Jours</option>
+            <option value="17">17 Jours</option>
+            <option value="18">18 Jours</option>
+            <option value="19">19 Jours</option>
+            <option value="20">20 Jours</option>
+          </select>
+          <div class="select_arrow">
+          </div>
+      </div>
+      
+      <div class="select" >
+        <select  id="Person">
+            <option>--Nombre de Person--</option>
+            <option value="1">1 </option>
+            <option value="2">2 </option>
+            <option value="3">3 </option>
+            <option value="4">4 </option>
+            <option value="5">5 </option>
+            <option value="6">6 </option>
+            <option value="7">7 </option>
+            <option value="8">8 </option>
+            <option value="9">9 </option>
+            <option value="10">10 </option>
+        </select>
+        <div class="select_arrow">
+        </div>
+       
+    </div>
+      <h3 id="total"></h3>
+      <p id="dure1"></p>
+      <button id="maint" onclick="chek() ; inform()">location maintenant</button>
+      <button id="">contactez l'agence</button>
+      
+  </div>
+         </div>
+         <!-- chekout form -->
+        <form class="formpay" id="chekk">
+  <div class="col-50">
+    <h3>Payment</h3>
+    <label for="fname" id="username"></label>
+    <label for="fname">votre location un appartement de<p  id="nbrd"></p></label>
+    <label for="fname" id="dure"></label>
+    <label for="fname" id="nbrp"></label>
+    <label for="fname" id="prix"></label>
+    <label for="fname">Accepted Cards</label>
+    <div class="icon-container">
+      <img src="logo/visa.png" >
+      <img src="logo/mastercard.png" >
+    </div>
+    <label for="cname">Nom sur la carte</label>
+    <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+    <label for="ccnum">Numéro de Carte de Crédit</label>
+    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+    <label for="expmonth">Mois exp</label>
+    <input type="text" id="expmonth" name="expmonth" placeholder="September">
+    <div class="row">
+      <div class="col-50">
+        <label for="expyear">Année exp</label>
+        <input type="text" id="expyear" name="expyear" placeholder="2018">
+      </div>
+      <div class="col-50">
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" placeholder="352">
+      </div>
+    </div>
+  </div>
+  
+</div>
+<input type="submit" value="Continue to checkout" class="btn1">
+         </form>
+       </div>
+       <!-- footer -->
+       <footer class="footer-distributed">
+    
+       <div class="footer-left">
+    
+       <h3>Lo<span>Geek</span></h3>
+    
+       <p class="footer-links">
+       <a href="#">Home</a>
+     · <a href="#">réservation</a>
+       <a href="#">Se connecter</a>
+     ·
+       <a href="#">S'inscrire</a>
+     ·
+       <a href="#">About</a>
+       </p>
+    
+       <p class="footer-company-name">loGeek &copy; 2020</p>
+       <p class="footer-company-name"> &copy; Hicham boudanes</p>
+       </div>
+    
+       <div class="footer-center">
+    
+       <div>
+       <i class="fa fa-map-marker"></i>
+       <p><span>11 Revolution Rue</span> Deel, Safi</p>
+       </div>
+    
+       <div>
+       <i class="fa fa-phone"></i>
+       <p>+212 643 123456</p>
+       </div>
+    
+       <div>
+       <i class="fa fa-envelope"></i>
+       <p><a href="mailto:support@company.com">contact@loGeek.com</a></p>
+       </div>
+    
+       </div>
+    
+       <div class="footer-right">
+    
+       <p class="footer-company-about">
+       <span>About the company</span>
+     Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+       </p>
+    
+       <div class="footer-icons">
+       <a href="#"><i ><img src="logo/facebook.svg" class="iicon"></i></a>
+       <a href="#"><i ><img src="logo/instagram.png" class="iicon"></i></a>
+       <a href="#"><i ><img src="logo/twitter.png" class="iicon"></i></a>
+       <a href="#"><i ><img src="logo/whatsapp.png" class="iicon"></i></a>
+       </div>
+    
+       </div>
+    
+       </footer>
+
+<!--sigin in-->
+<div id="idsn" class="modalsn">
+  <form class="modalsn-content" >
+    <div class="containersn">
+      <h1>S'inscrire</h1>
+      <p>Veuillez remplir ce formulaire pour créer un compte.</p>
+      <hr>
+      <label for="email"><b>username</b></label><br>
+      <input  type="text" id="myText"  class="desinputs" placeholder="Enter username" > <br>
+
+      <label for="psw"><b>Mot de passe</b></label><br>
+      <input  type="password" class="desinputs" placeholder="Enter Mot de passe" name="psw" required><br>
+
+      <label for="psw-repeat"><b>Répéter le mot de passe</b></label><br>
+      <input type="password" class="desinputs" placeholder="Répéter le mot de passe" name="psw-repeat" required><br>
+      
+      <label>
+        <input type="checkbox"  checked="checked" name="remember" style="margin-bottom:15px"> se souvenir
+      </label>
+
+      <p>En créant un compte, vous acceptez nos <a href="#" style="color:dodgerblue">Privacy policy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('idsn').style.display='none'" class="cancelbtn">Annuler</button>
+        <button type="submit" onclick="myFunction()" class="signupbtn">S'inscrire</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!--login in-->
+<div id="idlg" class="modalsn">
+  <form class="modalsn-content" >
+    <div class="containersn">
+      <h1>login</h1>
+      <p>Veuillez remplir ce formulaire pour créer un compte.</p>
+      <hr>
+      <label for="email"><b>username</b></label><br>
+      <input type="text" id="inputlogin" class="desinputs" placeholder="Enter Email" > <br>
+
+      <label for="psw"><b>Mot de passe</b></label><br>
+      <input type="password" class="desinputs" placeholder="Enter Mot de passe" name="psw" required><br>
+
+      
+      
+      <label>
+        <input type="checkbox"  checked="checked" name="remember" style="margin-bottom:15px"> se souvenir
+      </label>
+
+      <p>Pas encore inscrit? S'inscrire  <a href="#" onclick="logtosin()" style="color:dodgerblue"> S'inscrire </a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('idlg').style.display='none'" class="cancelbtn">Annuler</button>
+        <button type="submit" class="signupbtn">S'inscrire</button>
+      </div>
+    </div>
+  </form>
+</div>
+ <h1 id="demo"></h1>
+    <script src="location.js"></script>
+    <script src="local.storge.js"></script>
+</body>
+</html>
