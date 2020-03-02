@@ -346,7 +346,6 @@ overflow: hidden;
     display: inline-block;
     float: none;
   }
-  
 }
 .filter{
   width: 300px;
@@ -630,6 +629,9 @@ span.price {
 @media (max-width: 800px){
   .filter{
     display:none;
+  }
+  .filter1{
+    display: block;
   }
   .produit{
     width: 100%;
