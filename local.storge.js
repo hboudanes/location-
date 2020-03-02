@@ -9,6 +9,7 @@ function myFunction() {
     var x = document.getElementById("myText").value;
   //  document.getElementById("demo").innerHTML = x;
     document.getElementById("inputlogin").setAttribute('value',x);
+    return x ;
 }
 function inform(){
   var name = document.getElementById("myText").value;

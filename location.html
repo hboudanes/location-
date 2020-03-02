@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="location.css">
     <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>LoGeek Location</title>
+    <link rel="icon" href="logo/logo.svg">
 </head>
 <body>
     
@@ -371,12 +372,13 @@
       <hr>
       <label for="email"><b>username</b></label><br>
       <input  type="text" id="myText"  class="desinputs" placeholder="Enter username" > <br>
-
-      <label for="psw"><b>Mot de passe</b></label><br>
-      <input  type="password" class="desinputs" placeholder="Enter Mot de passe" name="psw" required><br>
+      <label for="email"><b>Votre âge</b></label><br>
+      <input  type="number" id="mage"  class="desinputs" placeholder="Enter Votre âge" > <br>
+      <label for="psw" ><b id="mot1">Mot de passe</b></label><br>
+      <input  type="password" id="myText1" class="desinputs" placeholder="Enter Mot de passe" name="psw" required><br>
 
       <label for="psw-repeat"><b>Répéter le mot de passe</b></label><br>
-      <input type="password" class="desinputs" placeholder="Répéter le mot de passe" name="psw-repeat" required><br>
+      <input type="password" id="myText2" class="desinputs" placeholder="Répéter le mot de passe" name="psw-repeat" required><br>
       
       <label>
         <input type="checkbox"  checked="checked" name="remember" style="margin-bottom:15px"> se souvenir
@@ -386,7 +388,7 @@
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('idsn').style.display='none'" class="cancelbtn">Annuler</button>
-        <button type="submit" onclick="myFunction()" class="signupbtn">S'inscrire</button>
+        <button type="submit" onclick="myFunction(); nothing();" class="signupbtn">S'inscrire</button>
       </div>
     </div>
   </form>
@@ -422,5 +424,6 @@
  <h1 id="demo"></h1>
     <script src="location.js"></script>
     <script src="local.storge.js"></script>
+    <script src="regualaireexp.js"></script>
 </body>
 </html>
