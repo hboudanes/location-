@@ -14,6 +14,8 @@ function myFunction() {
 function inform(){
   var name = document.getElementById("myText").value;
   document.getElementById("username").innerHTML = 'Mr'+ ' ' + name ;
+  var ag = document.getElementById("mage").value;
+  document.getElementById("afd").innerHTML =  ag + ' Ans' ;
   var totall = document.getElementById("total").innerHTML;
   document.getElementById("prix").innerHTML = totall;
   var nbrp = document.getElementById("Person").value;
